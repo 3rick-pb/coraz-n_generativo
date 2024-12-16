@@ -12,6 +12,25 @@
         <h1>E & E</h1>
     </div>
     <canvas id="alx"></canvas>
+    <div class="audio-control">
+        <button id="play-button">    🎶    </button>
+    </div>
+    <audio id="background-audio" src="images/audio.mp3" loop></audio>
     <script src="script.js"></script>
+    <script>
+        // Reproduce el audio cuando el usuario hace clic en el botón
+        const playButton = document.getElementById('play-button');
+        const audio = document.getElementById('background-audio');
+
+        playButton.addEventListener('click', () => {
+            audio.play()
+                .then(() => {
+                    playButton.style.display = 'none'; // Oculta el botón después de reproducir
+                })
+                .catch(error => {
+                    console.log('Error al reproducir el audio:', error);
+                });
+        });
+    </script>
 </body>
 </html>
