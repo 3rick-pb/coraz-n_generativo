@@ -34,6 +34,30 @@ body {
   }
 }
 
+.audio-control {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.audio-control button {
+  padding: 5px 30px;
+  font-size: 2rem;
+  background-color: #f8a7a7;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.3);
+  transition: transform 0.2s;
+}
+
+.audio-control button:hover {
+  transform: scale(1.1);
+}
+
 canvas {
   position: absolute;
   top: 0;
