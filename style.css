@@ -1,5 +1,41 @@
-body
-{ 
+body { 
   padding: 0;
   margin: 0;
+  overflow: hidden; /* Evita que aparezcan scrolls */
+  font-family: 'Arial', sans-serif; /* Cambia la fuente si deseas */
+  background: #000; /* Fondo oscuro para destacar los corazones */
+}
+
+.message {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ffffff;
+  z-index: 1;
+  animation: fadeIn 3s ease-in-out;
+}
+
+.message h1 {
+  font-size: 30px;
+  font-family: 'Courier New', Courier, monospace; /* Fuente romántica */
+  text-shadow: 2px 2px 8px rgb(255, 0, 221);
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translate(-50%, -60%);
+  }
+  to {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+  }
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
